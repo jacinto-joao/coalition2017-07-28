@@ -1,0 +1,10 @@
+.modal-header {
+    background-color: #5d9cec;
+    border-bottom: 0 none;
+    color: #ffffff;
+    min-height: 20px;
+    padding: 15px;
+}
+.modal-body{
+	padding: 0px;
+}

@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/coalition.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -48,7 +49,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->first_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -73,8 +74,17 @@
 
         @yield('content')
     </div>
+    <div id="ajax-modal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"></div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
+    <!-- bootstrap mixed on resources/assets -->
+    <script src="{{asset('js/app.js')}}"></script>
+    <!-- jquery validator-->
+    <script src="{{asset('js/validator.min.js')}}"></script>
+    <!-- Bootstrap Dialog for Moadal-->
+    <script src="{{asset('js/bootstrap.dialog.js')}}"></script>
+    <!-- Custom Script for coalition test -->
+    <script src="{{asset('js/coalition.js')}}"></script>
 </body>
 </html>
